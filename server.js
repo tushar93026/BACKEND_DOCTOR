@@ -14,7 +14,7 @@ connectCloudinary()
 app.use(express.json())
 const allowedOrigins = [
   'https://frontend-doctor-mu.vercel.app',
-  'https://admin-doctor.vercel.app/'];
+  'https://admin-doctor.vercel.app'];
 app.use(cors({
   origin: allowedOrigins,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
