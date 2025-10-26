@@ -12,8 +12,11 @@ const port = process.env.PORT || 4000
 connectDB()
 connectCloudinary()
 app.use(express.json())
+const allowedOrigins = [
+  'https://frontend-doctor-mu.vercel.app',
+  'https://admin-doctor.vercel.app/'];
 app.use(cors({
-  origin: ['https://frontend-doctor-mu.vercel.app'],
+  origin: allowedOrigins,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
