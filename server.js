@@ -13,7 +13,7 @@ connectDB()
 connectCloudinary()
 app.use(express.json())
 app.use(cors({
-  origin: ['https://frontend-doctor-mu.vercel.app/'], // your Vercel domain
+  origin: ['https://frontend-doctor-mu.vercel.app/'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
