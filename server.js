@@ -36,12 +36,12 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 // Serve frontend (React build folder)
-app.use(express.static(path.join(__dirname, './client/build')))
+app.use(express.static(path.join(__dirname, './client/build')));
 
 // Catch-all: send index.html for non-API routes
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, './client/build', 'index.html'))
-})
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.join(__dirname, './client/build', 'index.html'));
+});
 
 
 // ----------------------------------------
