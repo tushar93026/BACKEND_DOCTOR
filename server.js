@@ -13,13 +13,13 @@ connectDB()
 connectCloudinary()
 app.use(express.json())
 app.use(cors({
-  origin: ['https://frontend-doctor-mu.vercel.app', 'http://localhost:5173'],
+  origin: ['https://frontend-doctor-mu.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
-app.use('/api/admin', adminRouter)
-app.use('/api/doctor', doctorRouter)
-app.use('/api/user', userRouter)
+app.use('/admin', adminRouter)
+app.use('/doctor', doctorRouter)
+app.use('/user', userRouter)
 app.get('/', (req,res)=>{
     res.send('API WORKING')
 })
